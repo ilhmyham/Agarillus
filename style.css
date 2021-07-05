@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-areas: 'nav'
+                        'hero'
+                        'konten'
+                        'footer';
+    color: white;
+
+}
+
+.navbar {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8.5vh;
+    background-color: antiquewhite;
+}
+
+.navbar .logo a img{
+    width: 196px;
+    height: 66px;
+}
+
+.navbar .nav-list {
+    width: 40%;
+}
+
+.navbar .nav-list ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: 500;
+    list-style: none;
+    /* background-color: antiquewhite; */
+}
+
+.navbar .nav-list ul li a {
+    text-decoration: none;
+    color: #175A3B;
+}
+
+.navbar .nav-list ul li a:hover {
+    color: #349e6c;
+}
+
+.hero {
+    grid-area: hero;
+    background-image: url(gmbr/bgwbag.png);
+    background-position: center;
+    height: 91.5vh;
+}
+
+.konten {
+    grid-area: konten;
+    height: 3755px;
+    background-color: rgb(255, 255, 255);
+}
+
+.konten .judul-info {
+    height: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+    text-align: center;
+    padding: 50px;
+}
+
+.konten .judul-info img {
+    width: 294px;
+    height: 100px;
+}
+
+.konten .judul-info p {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 20px;
+    color: rgb(42, 54, 42);
+}
+
+.konten .main-konten {
+    height: 75%;
+    background-color: rgb(48, 54, 54);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.konten .main-konten .intro h1 {
+    text-align: center;
+    padding: 100px;
+}
+
+.konten .main-konten .intro .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1.5fr));
+    justify-items: center;
+    gap: 50px;
+    width: 80%;
+    margin: auto;
+    list-style: none;
+}
+
+.konten .main-konten .intro #judul-item{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.konten .main-konten .intro #deskripsi-item {
+    text-align: center;
+    /* position: absolute; */
+    font-weight: 500;
+    margin-top: -120px;
+    margin-bottom: 100px;
+    color: black;
+}
+
+.konten .main-konten .intro .pemasaran {
+    /* background-color: rgb(126, 126, 126); */
+    margin: auto; 
+    display: grid;
+    grid-template-areas: 'block1 block3'
+                        'block2 block3';
+    gap: 5px;
+    grid-template-columns: 1.3fr 1fr;
+    width: 70%;
+    height: 480px;
+
+}
+
+.konten .main-konten .intro .pemasaran .block1 {
+    grid-area: block1;
+    background-color: #FFD58E;
+}
+
+.konten .main-konten .intro .pemasaran .block2 {
+    grid-area: block2;
+    background-color: #FFD58E;
+}
+
+.konten .main-konten .intro .pemasaran .block3 {
+    grid-area: block3;
+    background-color: #175A3B;
+}
+
+.konten .main-konten .intro .product {
+    margin-top: 50px;
+    margin-bottom: 250px;
+}
+
+.konten .main-konten .intro .product .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 80%;
+    list-style: none;
+    margin: auto;
+}
+
+.konten .main-konten .intro .product .lihat_semua {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.konten .main-konten .intro .product .lihat_semua a {
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #d4df41;
+}
+
+.konten .main-konten .intro .product .lihat_semua a:hover{
+    color: #cbe07b;
+}
+
+.konten .main-konten .layanan {
+    height: 30%;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: #fff;
+    margin-bottom: 100px;
+    box-shadow: 0 20px 19px rgba(0, 0, 0, 0.3);
+}
+
+.konten .main-konten #container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 820px;
+    height: 48px;
+    margin: 50px auto -25px auto;
+    background-color: #FFD58E;
+    color: black;
+    border-radius: 40px;
+}
+
+.konten .main-konten .layanan .layanan-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    list-style: none;
+}
+
+.konten .main-konten .layanan .layanan-item #judul-ikon{
+    text-align: center;
+    margin-top: -100px;
+    color: black;
+}
+
+.footer {
+    grid-area: footer;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.footer .footer-nav {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    list-style: none;
+}
+
+.footer .footer-nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
